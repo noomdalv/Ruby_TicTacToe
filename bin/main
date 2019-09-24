@@ -1,9 +1,0 @@
-#!/usr/bin/env ruby
-
-class Main
-
-greeting = "Welcome to Tic Tac Toe"
-p greeting
-
-
-end
