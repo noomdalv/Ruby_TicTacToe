@@ -1,6 +1,7 @@
 #!/usr/bin/env ruby
 # frozen_string_literal: true
 
+# main class.
 class Main
   welcome = 'Welcome to Tic Tac Toe'
   p welcome
