@@ -1,5 +1,6 @@
 #!/usr/bin/env ruby
 # frozen_string_literal: true
+
 # Game Board
 class Board
   def initialize
@@ -14,38 +15,39 @@ class Board
     puts " #{@board[6]} | #{@board[7]} | #{@board[8]} "
   end
 
-  def insertMove(position, token = "X")
-	  @board[position] = token
+  def insertMove(position, token = 'X')
+    @board[position] = token
   end
 end
 
 # main class.
 class Main
-	welcome = p "Welcome to Ruby Tic Tac Toe"
+  welcome = 'Welcome to Ruby Tic Tac Toe'
+  p welcome
 
-	p "Player 1 please enter your name: "
-	p1name = gets.chomp
-	p "Hello #{p1name}, you will play with X"
+  p 'Player 1 please enter your name: '
+  p1name = gets.chomp
+  p "Hello #{p1name}, you will play with X"
 
-	p "Player 2 please enter your name: "
-	p2name = gets.chomp
-	p "Hello #{p2name}, you will play with O"
+  p 'Player 2 please enter your name: '
+  p2name = gets.chomp
+  p "Hello #{p2name}, you will play with O"
 
-	grid = Board.new
-	grid.display
+  grid = Board.new
+  grid.display
 
-	p "Player 1 Turn, please select your next move: "
-	p1turn = gets.chomp.to_i
-	grid.insertMove(p1turn)
+  p 'Player 1 Turn, please select your next move: '
+  p1turn = gets.chomp.to_i
+  grid.insertMove(p1turn)
 
-	grid.display
+  grid.display
 
-	p "Player 2 Turn, please select your next move: "
-	p2turn = gets.chomp.to_i
-	grid.insertMove(p2turn, "O")
+  p 'Player 2 Turn, please select your next move: '
+  p2turn = gets.chomp.to_i
+  grid.insertMove(p2turn, 'O')
 
-	grid.display
+  grid.display
 
-ending = p "Thank you for playing Tic Tac Toe"
-ending
+  ending = p 'Thank you for playing Tic Tac Toe'
+  ending
 end
