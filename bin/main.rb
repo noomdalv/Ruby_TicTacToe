@@ -3,18 +3,19 @@
 
 # main class.
 class Main
-  welcome = 'Welcome to Tic Tac Toe'
-  p welcome
+end
 
-  puts 'Player 1 please enter your name: '
-  p1 = gets.chomp
-  greeting(p1)
+# Game Board
+class Board
+  def initialize
+    @board = Array.new(9) { ' ' }
+  end
 
-  puts 'Player 2 please enter your name: '
-  p2 = gets.chomp
-  greeting(p2)
-
-  def greeting(name)
-    puts "Hello #{name}"
+  def display
+    puts " #{@board[0]} | #{@board[1]} | #{@board[2]} "
+    puts ' ----------- '
+    puts " #{@board[3]} | #{@board[4]} | #{@board[5]} "
+    puts ' ----------- '
+    puts " #{@board[6]} | #{@board[7]} | #{@board[8]} "
   end
 end
