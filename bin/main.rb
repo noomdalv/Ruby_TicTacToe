@@ -18,7 +18,28 @@ class Main
      puts " #{@board[6]} | #{@board[7]} | #{@board[8]} "
    end
 
-  end
+  def turn
+    puts 'Choose a spot between 1-9'
+    spot = gets.strip
+    spot = @game.board_index(spot)
+    if @game.valid_move?(spot)
+      @game.set_input(spot, @game.current_player)
+    else
+      turn
+    end
+    display
+  end
+
+  def play
+    turn until @game.over?
+    if @game.won?
+      puts "Congratulations #{@board[@game.won?.first]}!"
+    elsif @game.draw?
+      puts "It's a draw!"
+    end
+  end
+
+end
 
   main = Main.new
   main.play
