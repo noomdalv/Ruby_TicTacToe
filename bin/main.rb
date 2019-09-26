@@ -1,13 +1,23 @@
-#!/usr/bin/env ruby
-# frozen_string_literal: true
-
-require_relative '../lib/game_manager.rb'
-
-class Main
-  def initialize
-    @game = GameManager.new
-    @board = @game.init_board(9)
-  end
+#!/usr/bin/env ruby
+
+# frozen_string_literal: true
+
+
+
+require_relative '../lib/game_manager.rb'
+
+
+
+class Main
+
+  def initialize
+
+    @game = GameManager.new
+
+    @board = @game.init_board(9)
+
+  end
+
 
   def welcome
     # Welcome Message
@@ -29,14 +39,22 @@ class Main
   def ending
     puts 'Thank you for playing Tic Tac Toe.'
   end
-
-  def display
-    puts " #{@board[0]} | #{@board[1]} | #{@board[2]} "
-    puts ' ---------- '
-    puts " #{@board[3]} | #{@board[4]} | #{@board[5]} "
-    puts ' ---------- '
-    puts " #{@board[6]} | #{@board[7]} | #{@board[8]} "
-  end
+
+
+  def display
+
+    puts " #{@board[0]} | #{@board[1]} | #{@board[2]} "
+
+    puts ' ---------- '
+
+    puts " #{@board[3]} | #{@board[4]} | #{@board[5]} "
+
+    puts ' ---------- '
+
+    puts " #{@board[6]} | #{@board[7]} | #{@board[8]} "
+
+  end
+
 
   # Game begins, player 1 starts choosing between 1-9
   # if the input is different valid_move returns false and input is request again
@@ -65,9 +83,13 @@ class Main
       puts "It's a draw!"
     end
   end
-end
-
-main = Main.new
+end
+
+
+
+main = Main.new
+
 main.welcome
-main.play
+main.play
+
 main.ending
