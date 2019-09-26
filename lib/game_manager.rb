@@ -24,4 +24,29 @@ class GameManager
   def valid_move?(arr_pos)
     arr_pos.between?(0, 8) && !space_filled?(arr_pos)
   end
+
+  def turn_count
+    @board.select { |e| e == 'X' || e == 'O' }.size
+  end
+
+  def current_player
+    player = if (turn_count % 2).zero?
+               'X'
+             else
+               'O'
+             end
+    player
+  end
+
+  def full?
+    turn_count == 9
+  end
+
+  def draw?
+    !won? && full?
+  end
+
+  def over?
+    won? || full? || draw?
+  end
 end
