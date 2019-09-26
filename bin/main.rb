@@ -27,7 +27,7 @@ end
 # main class.
 class Main
   def initialize
-    @game = GameManager.new('game')
+    @game = GameManager.new(game)
     @board = Array.new(9) { '-' }
   end
 
