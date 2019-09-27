@@ -17,19 +17,19 @@ To play Tic-Tac-Toe:
 - 	Open a terminal window and go to game folder (cd ../Ruby_TicTacToe/)   
 -   Run the game, using command: bin/main.rb
 
-##How to play the game:
+## How to play the game:
 
 1. Players enter their name, Player 1 is assigned "X", Player 2 is assigned "O".
 
-![alt text](https://i.imgur.com/Tw121E2.jpg)
+      ![alt text](https://i.imgur.com/Tw121E2.jpg)
 
 2. Players alternate turns to choose an option between 1-9 according to the board.
 
-![alt text](https://i.imgur.com/bTwpJin.jpg)
+      ![alt text](https://i.imgur.com/bTwpJin.jpg)
 
 3. Keep alternating moves until one of the players has drawn a row of three symbols or until no one can win, in that case, there is a draw.
 
-![alt text](https://i.imgur.com/Ma480rO.jpg)
+      ![alt text](https://i.imgur.com/Ma480rO.jpg)
 
 #### Authors
 
