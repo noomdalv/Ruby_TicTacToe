@@ -2,24 +2,16 @@
 
 # frozen_string_literal: true
 
-
-
 require_relative '../lib/game_manager.rb'
 
-
-
 class Main
-
   def initialize
-
     @game = GameManager.new
 
     @board = @game.init_board(9)
     @player1 = nil
     @player2 = nil
-
   end
-
 
   def welcome
     puts "\nWelcome to Tic Tac Toe\n\n"
@@ -40,21 +32,17 @@ class Main
     puts "\n\nThank you for playing Tic Tac Toe."
   end
 
-
   def display
+    puts "\n       #{@board[0]} | #{@board[1]} | #{@board[2]} "
 
-    puts "\n #{@board[0]} | #{@board[1]} | #{@board[2]} "
+    puts '       ---------- '
 
-    puts ' ---------- '
+    puts "       #{@board[3]} | #{@board[4]} | #{@board[5]} "
 
-    puts " #{@board[3]} | #{@board[4]} | #{@board[5]} "
+    puts '       ---------- '
 
-    puts ' ---------- '
-
-    puts " #{@board[6]} | #{@board[7]} | #{@board[8]} "
-
+    puts "       #{@board[6]} | #{@board[7]} | #{@board[8]} "
   end
-
 
   def turn
     current = @game.current_player
@@ -88,8 +76,6 @@ class Main
     end
   end
 end
-
-
 
 main = Main.new
 
