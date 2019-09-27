@@ -58,7 +58,11 @@ class Main
 
   def turn
     current = @game.current_player
-    print "\nPlayer #{current}, choose a spot between 1-9: "
+    if current == 'X'
+      print "\n #{@player1}, choose a spot between 1-9: "
+    else
+      print "\n #{@player2}, choose a spot between 1-9: "
+    end
     spot = gets.strip
     spot = @game.board_index(spot)
     if @game.valid_move?(spot)
@@ -74,7 +78,11 @@ class Main
   def play
     turn until @game.over?
     if @game.won?
-      puts "\nCongratulations #{@board[@game.won?.first]}!"
+      if @board[@game.won?.first] == 'X'
+        puts "\nCongratulations #{@player1}!"
+      else
+        puts "\nCongratulations #{@player2}!"
+      end
     elsif @game.draw?
       puts "\nIt's a draw!"
     end
