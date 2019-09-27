@@ -56,8 +56,7 @@ class Main
     if @game.valid_move?(spot)
       @game.set_input(spot, @game.current_player)
     else
-      print "\nPlease enter a valid option between 1-9: \n"
-      display
+      print "\nPlease enter a valid option between 1-9: \n"      
       turn
     end
     display
