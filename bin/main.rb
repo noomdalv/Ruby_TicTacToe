@@ -15,23 +15,23 @@ class Main
     @game = GameManager.new
 
     @board = @game.init_board(9)
+    @player1 = nil
+    @player2 = nil
 
   end
 
 
   def welcome
-    # Welcome Message
     puts "\nWelcome to Tic Tac Toe\n\n"
 
-    # Request for player names and save them to p1 and p2
     print 'Player 1 please enter your name: '
-    p1 = gets.chomp
+    @player1 = gets.chomp
 
     print "\nPlayer 2 please enter your name: "
-    p2 = gets.chomp
+    @player2 = gets.chomp
 
-    puts "\nPlayer 1: #{p1}, Token: X"
-    puts "Player 2: #{p2}, Token: O\n"
+    puts "\nPlayer 1: #{@player1}, Token: X"
+    puts "Player 2: #{@player2}, Token: O\n"
 
     display
   end
@@ -56,8 +56,6 @@ class Main
   end
 
 
-  # Game begins, player 1 starts choosing between 1-9
-  # if the input is different valid_move returns false and input is request again
   def turn
     current = @game.current_player
     print "\nPlayer #{current}, choose a spot between 1-9: "
@@ -73,8 +71,6 @@ class Main
     display
   end
 
-  # Turn method is called for players to fill the board until @game.over? method is true
-  # If total moves = 9 and no combinations detected, its a draw, if a combination is detected, @game.won is executed
   def play
     turn until @game.over?
     if @game.won?
