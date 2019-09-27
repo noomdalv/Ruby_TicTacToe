@@ -20,16 +20,20 @@ To play Tic-Tac-Toe:
 ## How to play the game:
 
 1. Players enter their name, Player 1 is assigned "X", Player 2 is assigned "O".
+   <p align="center">
+     ![alt text](https://i.imgur.com/Tw121E2.jpg)
+   </p>
+      
+2. Players alternate turns to choose an option between 1-9 according to the board.      
+   <p align="center">
+     ![alt text](https://i.imgur.com/bTwpJin.jpg)
+   </p>
 
-      ![alt text](https://i.imgur.com/Tw121E2.jpg)
-
-2. Players alternate turns to choose an option between 1-9 according to the board.
-
-      ![alt text](https://i.imgur.com/bTwpJin.jpg)
-
-3. Keep alternating moves until one of the players has drawn a row of three symbols or until no one can win, in that case, there is a draw.
-
-      ![alt text](https://i.imgur.com/Ma480rO.jpg)
+3. Keep alternating moves until one of the players has drawn a row of three symbols or until no one can win, in that case, there is a draw.      
+   <p align="center">
+     ![alt text](https://i.imgur.com/Ma480rO.jpg)
+   </p>
+      
 
 #### Authors
 
