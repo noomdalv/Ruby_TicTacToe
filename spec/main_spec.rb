@@ -3,19 +3,13 @@
 require './bin/main.rb'
 
 RSpec.describe Main do
-  let (:main) { Main.new }
+  #let(:main) { Main.new }
 
-  describe '#welcome' do
-    it 'returns display board method' do
-      expect(main.welcome).to eql(main.display)
-    end
-  end
-
-  describe '#' do
-    it '' do
-      expect.to eql
-    end
-  end
+  #describe '#welcome' do
+  #  it 'returns display board method' do
+  #    expect(main.welcome).to eql(main.display)
+  #  end
+  #end
 end
 
 # describe Calculator do
