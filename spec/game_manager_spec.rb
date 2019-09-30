@@ -5,7 +5,7 @@ require './lib/game_manager.rb'
 RSpec.describe GameManager do
   let(:game_manager) { GameManager.new }
   let(:init_board) { game_manager.init_board(9) }
-	
+
   describe '#init_board' do
     it 'This initialize board array' do
       expect(init_board).to eq(['-', '-', '-', '-', '-', '-', '-', '-', '-'])
@@ -138,4 +138,37 @@ RSpec.describe GameManager do
       expect(game_manager.won?).to eq([2, 5, 8])
     end
   end
+
+	describe '#draw?' do
+    it 'Checks if there is a draw after all positions are occupied and no win' do
+      board = init_board
+      board[0] = 'X'
+			board[1] = 'O'
+			board[2] = 'X'
+			board[3] = 'X'
+			board[4] = 'X'
+			board[5] = 'O'
+			board[6] = 'O'
+			board[7] = 'X'
+			board[8] = 'O'
+      expect(game_manager.draw?).to eq(true)
+    end
+  end
+
+	describe '#over?' do
+    it 'Checks for won? or full? or draw?, returns true if game is over' do
+      board = init_board
+			board[0] = 'X'
+			board[1] = 'O'
+			board[2] = 'X'
+			board[3] = 'X'
+			board[4] = 'X'
+			board[5] = 'O'
+			board[6] = 'O'
+			board[7] = 'X'
+			board[8] = 'O'
+      expect(game_manager.over?).to eq(true)
+    end
+  end
+
 end
