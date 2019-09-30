@@ -1,4 +1,4 @@
-require "../lib/game_manager.rb"
+require "./lib/game_manager.rb"
 
 describe GameManager do
   describe "#" do

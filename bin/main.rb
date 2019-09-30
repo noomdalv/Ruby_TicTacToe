@@ -15,18 +15,18 @@ class Main
   end
 
   def welcome
-    puts "\nWelcome to Tic Tac Toe\n\n"
-
-    print 'Player 1 please enter your name: '
-    @player1.name = gets.chomp
-    @player1.symbol = 'X'
-
-    print "\nPlayer 2 please enter your name: "
-    @player2.name = gets.chomp
-    @player2.symbol = 'O'
-
-    puts "\nPlayer 1: #{@player1.name}, Symbol: #{@player1.symbol}"
-    puts "Player 2: #{@player2.name}, Symbol: #{@player2.symbol}\n"
+    #puts "\nWelcome to Tic Tac Toe\n\n"
+#
+    #print 'Player 1 please enter your name: '
+    #@player1.name = gets.chomp
+    #@player1.symbol = 'X'
+#
+    #print "\nPlayer 2 please enter your name: "
+    #@player2.name = gets.chomp
+    #@player2.symbol = 'O'
+#
+    #puts "\nPlayer 1: #{@player1.name}, Symbol: #{@player1.symbol}"
+    #puts "Player 2: #{@player2.name}, Symbol: #{@player2.symbol}\n"
 
     display
   end
