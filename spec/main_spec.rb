@@ -1,16 +1,16 @@
 # frozen_string_literal: true
 
-#require './bin/main.rb'
+# require './bin/main.rb'
 
-#RSpec.describe Main do
-  #let(:main) { Main.new }
+# RSpec.describe Main do
+# let(:main) { Main.new }
 
-  #describe '#welcome' do
-  #  it 'returns display board method' do
-  #    expect(main.welcome).to eql(main.display)
-  #  end
-  #end
-#end
+# describe '#welcome' do
+#  it 'returns display board method' do
+#    expect(main.welcome).to eql(main.display)
+#  end
+# end
+# end
 
 # describe Calculator do
 #  describe "#add" do
