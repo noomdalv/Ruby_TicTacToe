@@ -5,8 +5,9 @@ require './lib/game_manager.rb'
 RSpec.describe GameManager do
   let(:game_manager) { GameManager.new }
   let(:init_board) { game_manager.init_board(9) }
+	
   describe '#init_board' do
-    it 'This initilaze board array' do
+    it 'This initialize board array' do
       expect(init_board).to eq(['-', '-', '-', '-', '-', '-', '-', '-', '-'])
     end
   end
@@ -111,6 +112,30 @@ RSpec.describe GameManager do
       board[7] = 'X'
       board[8] = 'X'
       expect(game_manager.won?).to eq([6, 7, 8])
+    end
+
+		it 'Left vertical win combination' do
+      board = init_board
+      board[0] = 'O'
+      board[3] = 'O'
+      board[6] = 'O'
+      expect(game_manager.won?).to eq([0, 3, 6])
+    end
+
+		it 'Middle vertical win combination' do
+      board = init_board
+      board[1] = 'O'
+      board[4] = 'O'
+      board[7] = 'O'
+      expect(game_manager.won?).to eq([1, 4, 7])
+    end
+
+		it 'Right vertical win combination' do
+      board = init_board
+      board[2] = 'O'
+      board[5] = 'O'
+      board[8] = 'O'
+      expect(game_manager.won?).to eq([2, 5, 8])
     end
   end
 end
