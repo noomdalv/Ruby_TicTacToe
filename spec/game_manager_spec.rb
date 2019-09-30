@@ -71,4 +71,30 @@ RSpec.describe GameManager do
       expect(game_manager.full?).to eq(false)
     end
   end
+
+  describe '#won?' do
+    it 'Top horizontal win combination' do
+      board = init_board
+      board[0] = 'O'
+      board[1] = 'O'
+      board[2] = 'O'
+      expect(game_manager.won?).to eq([0, 1, 2])
+    end
+
+    it 'First Diagonal win combination' do
+      board = init_board
+      board[0] = 'X'
+      board[4] = 'X'
+      board[8] = 'X'
+      expect(game_manager.won?).to eq([0, 4, 8])
+    end
+
+    it 'Second Diagonal win combination' do
+      board = init_board
+      board[2] = 'X'
+      board[4] = 'X'
+      board[6] = 'X'
+      expect(game_manager.won?).to eq([6, 4, 2])
+    end
+  end
 end
