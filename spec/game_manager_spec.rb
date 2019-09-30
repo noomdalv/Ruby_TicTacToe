@@ -53,23 +53,22 @@ RSpec.describe GameManager do
     end
   end
 
-	describe '#current_player' do
+  describe '#current_player' do
     it 'Displays current player symbol based on turn_count, X if even, O if odd' do
-			board = init_board
-			board[0] = "X"
-      expect(game_manager.current_player).to eq("O")
+      board = init_board
+      board[0] = 'X'
+      expect(game_manager.current_player).to eq('O')
     end
   end
 
-	describe '#full?' do
+  describe '#full?' do
     it 'Checks if all the positions in the board are occupied' do
-			board = init_board
-			board[0], board[1], board[2], board[3] = "X", "O", "X", "O"
+      board = init_board
+      board[0] = 'X'
+      board[1] = 'O'
+      board[2] = 'X'
+      board[3] = 'O'
       expect(game_manager.full?).to eq(false)
     end
   end
-
-
-
-
 end
