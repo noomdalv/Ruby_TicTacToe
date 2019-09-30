@@ -169,6 +169,20 @@ RSpec.describe GameManager do
 			board[8] = 'O'
       expect(game_manager.over?).to eq(true)
     end
+
+    it 'Checks for won? or full? or draw?, returns true if game is over' do
+      board = init_board
+      board[0] = 'X'
+      board[1] = 'X'
+      board[2] = 'X'
+      board[3] = 'X'
+      board[4] = 'X'
+      board[5] = 'O'
+      board[6] = 'O'
+      board[7] = 'X'
+      board[8] = 'O'
+      expect(game_manager.over?).to eq(game_manager.won?)
+    end
   end
 
 end
