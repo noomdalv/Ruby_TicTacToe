@@ -1,6 +1,7 @@
 # frozen_string_literal: true
 
 class GameManager
+  attr_accessor :board
   def initialize
     @board = nil
   end
