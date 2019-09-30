@@ -96,5 +96,21 @@ RSpec.describe GameManager do
       board[6] = 'X'
       expect(game_manager.won?).to eq([6, 4, 2])
     end
+
+    it 'Middle horizontal win combination' do
+      board = init_board
+      board[3] = 'O'
+      board[4] = 'O'
+      board[5] = 'O'
+      expect(game_manager.won?).to eq([3, 4, 5])
+    end
+
+    it 'Bottom horizontal win combination' do
+      board = init_board
+      board[6] = 'X'
+      board[7] = 'X'
+      board[8] = 'X'
+      expect(game_manager.won?).to eq([6, 7, 8])
+    end
   end
 end
