@@ -114,7 +114,7 @@ RSpec.describe GameManager do
       expect(game_manager.won?).to eq([6, 7, 8])
     end
 
-		it 'Left vertical win combination' do
+    it 'Left vertical win combination' do
       board = init_board
       board[0] = 'O'
       board[3] = 'O'
@@ -122,7 +122,7 @@ RSpec.describe GameManager do
       expect(game_manager.won?).to eq([0, 3, 6])
     end
 
-		it 'Middle vertical win combination' do
+    it 'Middle vertical win combination' do
       board = init_board
       board[1] = 'O'
       board[4] = 'O'
@@ -130,7 +130,7 @@ RSpec.describe GameManager do
       expect(game_manager.won?).to eq([1, 4, 7])
     end
 
-		it 'Right vertical win combination' do
+    it 'Right vertical win combination' do
       board = init_board
       board[2] = 'O'
       board[5] = 'O'
@@ -139,34 +139,34 @@ RSpec.describe GameManager do
     end
   end
 
-	describe '#draw?' do
+  describe '#draw?' do
     it 'Checks if there is a draw after all positions are occupied and no win' do
       board = init_board
       board[0] = 'X'
-			board[1] = 'O'
-			board[2] = 'X'
-			board[3] = 'X'
-			board[4] = 'X'
-			board[5] = 'O'
-			board[6] = 'O'
-			board[7] = 'X'
-			board[8] = 'O'
+      board[1] = 'O'
+      board[2] = 'X'
+      board[3] = 'X'
+      board[4] = 'X'
+      board[5] = 'O'
+      board[6] = 'O'
+      board[7] = 'X'
+      board[8] = 'O'
       expect(game_manager.draw?).to eq(true)
     end
   end
 
-	describe '#over?' do
+  describe '#over?' do
     it 'Checks for won? or full? or draw?, returns true if game is over' do
       board = init_board
-			board[0] = 'X'
-			board[1] = 'O'
-			board[2] = 'X'
-			board[3] = 'X'
-			board[4] = 'X'
-			board[5] = 'O'
-			board[6] = 'O'
-			board[7] = 'X'
-			board[8] = 'O'
+      board[0] = 'X'
+      board[1] = 'O'
+      board[2] = 'X'
+      board[3] = 'X'
+      board[4] = 'X'
+      board[5] = 'O'
+      board[6] = 'O'
+      board[7] = 'X'
+      board[8] = 'O'
       expect(game_manager.over?).to eq(true)
     end
 
@@ -184,5 +184,4 @@ RSpec.describe GameManager do
       expect(game_manager.over?).to eq(game_manager.won?)
     end
   end
-
 end
