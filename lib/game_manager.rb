@@ -30,7 +30,7 @@ class GameManager
   end
 
   def set_input(index, input = 'X')
-    @board[index] = input
+    @board[index] = input		
   end
 
   def space_filled?(index)
