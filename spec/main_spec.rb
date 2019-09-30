@@ -1,8 +1,8 @@
 # frozen_string_literal: true
 
-require './bin/main.rb'
+#require './bin/main.rb'
 
-RSpec.describe Main do
+#RSpec.describe Main do
   #let(:main) { Main.new }
 
   #describe '#welcome' do
@@ -10,7 +10,7 @@ RSpec.describe Main do
   #    expect(main.welcome).to eql(main.display)
   #  end
   #end
-end
+#end
 
 # describe Calculator do
 #  describe "#add" do
