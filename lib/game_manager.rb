@@ -1,7 +1,6 @@
 # frozen_string_literal: true
 
 class GameManager
-
   def initialize
     @board = nil
   end
