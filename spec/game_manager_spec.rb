@@ -35,11 +35,19 @@ RSpec.describe GameManager do
   end
 
   describe '#valid_move?' do
-    it 'Checks if option selected is between 1-9, and is not occupied' do
-      board = init_board
-      board[3] = 'O'
-      expect(game_manager.valid_move?(3)).to eq(false)
-    end
+		context 'Invalid Move (Board position occupied)'
+		it 'Checks if option selected is between 1-9, returns false if occupied' do
+			board = init_board
+			board[3] = 'O'
+			expect(game_manager.valid_move?(3)).to eq(false)
+		end
+
+		context 'Valid Move (Board position empty)'
+		it 'Checks if option selected is between 1-9, returns true if empty' do
+			board = init_board
+			board[3] = 'O'
+			expect(game_manager.valid_move?(1)).to eq(true)
+		end
   end
 
   describe '#turn_count' do
