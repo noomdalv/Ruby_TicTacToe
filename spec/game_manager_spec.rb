@@ -27,11 +27,20 @@ RSpec.describe GameManager do
   end
 
   describe '#space_filled?' do
+		context 'Current space = filled'
     it 'Checks if a board position has X or O' do
       board = init_board
       board[1] = 'X'
       expect(game_manager.space_filled?(1)).to eq(true)
     end
+
+		context 'Current space = empty'
+		it 'Checks if a board position has X or O' do
+      board = init_board
+      board[2] = '-'
+      expect(game_manager.space_filled?(2)).to eq(false)
+    end
+
   end
 
   describe '#valid_move?' do
@@ -68,9 +77,17 @@ RSpec.describe GameManager do
       board[0] = 'X'
       expect(game_manager.current_player).to eq('O')
     end
+
+		it 'Displays current player symbol based on turn_count, X if even, O if odd' do
+      board = init_board
+      board[0] = 'X'
+			board[1] = 'O'
+      expect(game_manager.current_player).to eq('X')
+    end
   end
 
   describe '#full?' do
+		context 'Board not full'
     it 'Checks if all the positions in the board are occupied' do
       board = init_board
       board[0] = 'X'
@@ -78,6 +95,21 @@ RSpec.describe GameManager do
       board[2] = 'X'
       board[3] = 'O'
       expect(game_manager.full?).to eq(false)
+    end
+
+		context 'Board full'
+    it 'Checks if all the positions in the board are occupied' do
+      board = init_board
+      board[0] = 'X'
+      board[1] = 'O'
+      board[2] = 'X'
+      board[3] = 'O'
+			board[4] = 'X'
+			board[5] = 'O'
+			board[6] = 'X'
+      board[7] = 'O'
+			board[8] = 'X'
+      expect(game_manager.full?).to eq(true)
     end
   end
 
@@ -164,6 +196,7 @@ RSpec.describe GameManager do
   end
 
   describe '#over?' do
+		context 'Board full, no winning combination detected'
     it 'Checks for won? or full? or draw?, returns true if game is over' do
       board = init_board
       board[0] = 'X'
@@ -178,6 +211,7 @@ RSpec.describe GameManager do
       expect(game_manager.over?).to eq(true)
     end
 
+		context 'Board full, with a winning combination'
     it 'Checks for won? or full? or draw?, returns true if game is over' do
       board = init_board
       board[0] = 'X'
