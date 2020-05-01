@@ -1,4 +1,4 @@
-# Ruby_TicTacToe
+# Project: Ruby TicTacToe
 
 # Tic Tac Toe OOP (Object Oriented Programming)
 
@@ -7,7 +7,7 @@
 
 ## Built with:
 
--   Ruby
+-   Ruby 2.6.5
 
 ## How to run the game:
 
@@ -33,9 +33,13 @@ To play Tic-Tac-Toe:
    <p align="center">
      <img src="https://i.imgur.com/Ma480rO.jpg">
    </p>
-      
+  
+## 👤 Authors
 
-#### Authors
+- Github: [@lekegitrepo](https://github.com/lekegitrepo)
 
--   [@lekegitrepo](https://github.com/lekegitrepo)
--   [@noomdalv](https://github.com/noomdalv/)
+- Github: [@noomdalv](https://github.com/noomdalv/)
+
+## License
+
+This project is 📝 [MIT](https://opensource.org/licenses/MIT) licensed.
