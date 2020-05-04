@@ -36,9 +36,11 @@ To play Tic-Tac-Toe:
   
 ## 👤 Authors
 
-- Github: [@lekegitrepo](https://github.com/lekegitrepo)
+- Github: [@lekegitrepo](https://github.com/lekegitrepo)<br />
+  Email: leketemi@gmail.com
 
-- Github: [@noomdalv](https://github.com/noomdalv/)
+- Github: [@noomdalv](https://github.com/noomdalv/)<br />
+  Email: vladlunasan@gmail.com
 
 ## License
 
